@@ -1,0 +1,5 @@
+wazo-router-confd-client (0.1) wazo-router; urgency=medium
+
+  * Initial release.
+
+ -- Wazo Maintainers <dev+pkg@wazo.io>  Thu, 30 Mar 2018 11:07:22 -0100
