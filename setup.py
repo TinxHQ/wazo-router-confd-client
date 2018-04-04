@@ -18,6 +18,8 @@ setup(
     entry_points={
         'wazo_router_confd_client.commands': [
             'config = wazo_router_confd_client.commands.config:ConfigCommand',
+            'carriers = wazo_router_confd_client.commands.carriers:CarriersCommand',
+            'endpoints = wazo_router_confd_client.commands.endpoints:EndpointsCommand',
         ],
     }
 )
