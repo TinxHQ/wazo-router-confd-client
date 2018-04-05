@@ -20,6 +20,8 @@ setup(
             'config = wazo_router_confd_client.commands.config:ConfigCommand',
             'carriers = wazo_router_confd_client.commands.carriers:CarriersCommand',
             'endpoints = wazo_router_confd_client.commands.endpoints:EndpointsCommand',
+            'inbound = wazo_router_confd_client.commands.inbound:InboundCommand',
+            'outbound = wazo_router_confd_client.commands.outbound:OutboundCommand',
         ],
     }
 )
