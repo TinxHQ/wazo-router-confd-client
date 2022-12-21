@@ -1,4 +1,4 @@
-# Copyright 2018 The Wazo Authors  (see the AUTHORS file)
+# Copyright 2018-2022 The Wazo Authors  (see the AUTHORS file)
 # SPDX-License-Identifier: GPL-3.0+
 
 from wazo_router_confd_client.command import ConfdCommand
@@ -21,17 +21,17 @@ class OutboundCommand(ConfdCommand):
         return r.json()
 
     def get(self, outbound_uuid):
-        url = '{base}/{uuid}'.format(base=self.base_url, uuid=outbound_uuid)
+        url = f'{self.base_url}/{outbound_uuid}'
         r = self.session.get(url, headers=self._ro_headers)
         self.raise_from_response(r)
         return r.json()
 
     def delete(self, outbound_uuid):
-        url = '{base}/{uuid}'.format(base=self.base_url, uuid=outbound_uuid)
+        url = f'{self.base_url}/{outbound_uuid}'
         r = self.session.delete(url, headers=self._ro_headers)
         self.raise_from_response(r)
 
     def update(self, outbound_uuid, outbound):
-        url = '{base}/{uuid}'.format(base=self.base_url, uuid=outbound_uuid)
+        url = f'{self.base_url}/{outbound_uuid}'
         r = self.session.put(url, json=outbound, headers=self._rw_headers)
         self.raise_from_response(r)
